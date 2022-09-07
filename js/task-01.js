@@ -2,9 +2,9 @@ const categoriesRef = document.querySelectorAll('.item');
 
 console.log('Number of categories:', categoriesRef.length);
 
-for (let i = 0; i < categoriesRef.length; i += 1) {
-  const titleRef = categoriesRef[i].querySelector('h2');
+categoriesRef.forEach(category => {
+  const titleRef = category.querySelector('h2');
   console.log('Category:', titleRef.textContent);
-  const amountOfElRef = categoriesRef[i].querySelectorAll('li');
+  const amountOfElRef = category.querySelectorAll('li');
   console.log('Elements:', amountOfElRef.length);
-}
+});
